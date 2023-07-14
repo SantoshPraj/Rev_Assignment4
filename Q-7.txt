@@ -1,0 +1,49 @@
+Q7.Can you pass lambda expressions to a method? When?
+
+
+
+
+ANSWER:
+
+
+
+
+Yes, you can pass lambda expressions as arguments to methods in Java. This is one of the key features introduced in Java 8 to support functional programming constructs.
+
+Lambda expressions can be passed as arguments when a method parameter expects a functional interface type. A functional interface is an interface that contains only one abstract method. The lambda expression is used to provide an implementation for that single abstract method.
+
+Here's an example to demonstrate passing lambda expressions as method arguments:
+
+```java
+interface MyFunction {
+    int apply(int x, int y);
+}
+
+class Calculator {
+    public static int operate(int a, int b, MyFunction function) {
+        return function.apply(a, b);
+    }
+}
+
+public class LambdaExpressionExample {
+    public static void main(String[] args) {
+        int result1 = Calculator.operate(5, 3, (x, y) -> x + y);
+        System.out.println("Addition: " + result1); // Output: Addition: 8
+
+        int result2 = Calculator.operate(10, 4, (x, y) -> x - y);
+        System.out.println("Subtraction: " + result2); // Output: Subtraction: 6
+    }
+}
+```
+
+In this example, we have a functional interface `MyFunction` with a single abstract method `apply()`, as shown in the previous example.
+
+The `Calculator` class has a static method `operate()` that takes two integers and a `MyFunction` instance as arguments. The `operate()` method applies the provided lambda expression (implementation of `MyFunction`) to the given integers.
+
+In the `main` method, we call the `operate()` method of the `Calculator` class and pass lambda expressions as arguments:
+- `(x, y) -> x + y` represents a lambda expression that performs addition.
+- `(x, y) -> x - y` represents a lambda expression that performs subtraction.
+
+The `operate()` method executes the lambda expression and returns the result, which is then printed in the `main` method.
+
+By passing lambda expressions as method arguments, you can easily customize behavior and provide specific implementations at the call site, promoting code flexibility, reusability, and the ability to work with higher-order functions.

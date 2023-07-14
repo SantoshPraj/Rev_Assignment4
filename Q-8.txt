@@ -1,0 +1,27 @@
+Q8.What is the functional interface in Java 8?
+
+
+
+
+ANSWER:
+
+
+
+
+In Java 8, a functional interface is an interface that contains exactly one abstract method. Functional interfaces are a key concept in Java's support for functional programming and lambda expressions.
+
+Here are some key points about functional interfaces in Java 8:
+
+1. Single Abstract Method (SAM) Interface: A functional interface has only one abstract method. It may also declare default methods or static methods, but it must have exactly one abstract method.
+
+2. @FunctionalInterface Annotation: The `@FunctionalInterface` annotation is an optional annotation that can be applied to an interface to indicate that it is intended to be a functional interface. The compiler checks that the interface indeed meets the criteria of a functional interface.
+
+3. Lambda Expressions and Method References: Functional interfaces are designed to be used with lambda expressions and method references. A lambda expression can provide an implementation for the single abstract method of a functional interface, making it easy to represent behavior as a value. Method references can also be used to refer to methods that match the signature of the functional interface's abstract method.
+
+4. JDK Functional Interfaces: Java 8 introduced several functional interfaces in the JDK's `java.util.function` package, which provide commonly used function types. These interfaces include `Predicate`, `Function`, `Consumer`, `Supplier`, and more. They offer a range of functional interfaces for various use cases, such as filtering, mapping, transforming, and aggregating data.
+
+5. Functional Programming Support: Functional interfaces, along with lambda expressions and method references, enable functional programming constructs in Java. They allow for the use of higher-order functions, function composition, and functional pipelines, promoting code that is concise, expressive, and more focused on behavior rather than implementation details.
+
+6. Backward Compatibility: Java 8's functional interfaces are designed to be backward compatible with existing interfaces that have only one abstract method. This means that functional interfaces can be used with pre-existing APIs that adhere to the single abstract method contract.
+
+By using functional interfaces, Java 8 enables functional programming techniques, making it easier to work with behavior as values and write more concise and expressive code. They provide a powerful tool for passing behavior to methods, implementing callbacks, and working with higher-order functions.

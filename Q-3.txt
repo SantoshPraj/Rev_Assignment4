@@ -1,0 +1,53 @@
+Q3.Write a program  to show the use of functional interface in java?
+
+
+
+
+ANSWER:
+
+
+
+Certainly! Here's an example program that demonstrates the use of a functional interface in Java:
+
+```java
+@FunctionalInterface
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+public class FunctionalInterfaceExample {
+    public static void main(String[] args) {
+        // Using lambda expression to implement the functional interface
+        Calculator addition = (a, b) -> a + b;
+        System.out.println("Addition: " + addition.calculate(5, 3)); // Output: Addition: 8
+
+        Calculator subtraction = (a, b) -> a - b;
+        System.out.println("Subtraction: " + subtraction.calculate(10, 4)); // Output: Subtraction: 6
+
+        // Using a method reference to implement the functional interface
+        Calculator multiplication = FunctionalInterfaceExample::multiply;
+        System.out.println("Multiplication: " + multiplication.calculate(6, 5)); // Output: Multiplication: 30
+    }
+
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+```
+
+In this example, we create a functional interface called `Calculator` with a single abstract method `calculate()`. The `@FunctionalInterface` annotation ensures that the interface is a functional interface and can be used with lambda expressions.
+
+In the `main` method, we demonstrate the use of the functional interface in two ways:
+
+1. Lambda Expression:
+   - We create an instance of the functional interface using a lambda expression.
+   - The lambda expression defines the implementation of the `calculate()` method by adding two integers or subtracting one integer from another.
+   - We invoke the `calculate()` method on the instances to perform addition and subtraction.
+
+2. Method Reference:
+   - We create an instance of the functional interface using a method reference.
+   - The method reference refers to a static method (`multiply()`) defined in the `FunctionalInterfaceExample` class.
+   - The method reference is compatible with the functional interface's abstract method signature.
+   - We invoke the `calculate()` method on the instance to perform multiplication.
+
+By using functional interfaces, we can write more concise and expressive code, especially when working with single abstract methods. Lambda expressions and method references allow us to treat functions as first-class citizens in Java, enabling functional programming-style constructs and facilitating the use of higher-order functions.

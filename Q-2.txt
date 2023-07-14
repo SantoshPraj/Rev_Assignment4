@@ -1,0 +1,66 @@
+Q2.Write a program a Program with 2 concrete method and 2 abstract method in java ?
+
+
+
+
+
+ANSWER:
+
+
+Certainly! Here's an example program that includes a class with two concrete methods and two abstract methods:
+
+```java
+abstract class Animal {
+    public void eat() {
+        System.out.println("Animal is eating.");
+    }
+
+    public void sleep() {
+        System.out.println("Animal is sleeping.");
+    }
+
+    public abstract void makeSound();
+    public abstract void move();
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog is barking.");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Dog is running.");
+    }
+}
+
+public class AbstractExample {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // Output: Animal is eating.
+        dog.sleep(); // Output: Animal is sleeping.
+        dog.makeSound(); // Output: Dog is barking.
+        dog.move(); // Output: Dog is running.
+    }
+}
+```
+
+Output:
+```
+Animal is eating.
+Animal is sleeping.
+Dog is barking.
+Dog is running.
+```
+
+In this example, we have an abstract class `Animal` with two concrete methods (`eat()` and `sleep()`) and two abstract methods (`makeSound()` and `move()`).
+
+- The concrete methods `eat()` and `sleep()` have an implementation in the `Animal` class and can be directly used by the subclasses.
+- The abstract methods `makeSound()` and `move()` do not have an implementation in the `Animal` class and are marked with the `abstract` keyword. These methods must be implemented in any concrete subclass that extends `Animal`.
+
+The `Dog` class is a concrete subclass of `Animal` that extends it. It provides the implementation for the abstract methods `makeSound()` and `move()`.
+
+In the `main` method, we create an instance of `Dog` and call the concrete methods (`eat()` and `sleep()`) inherited from the `Animal` class, as well as the overridden abstract methods (`makeSound()` and `move()`) specific to the `Dog` class.
+
+By using an abstract class with abstract methods, we can define a common interface (`Animal`) and enforce specific behavior that must be implemented by the subclasses. This promotes code reusability, modularity, and ensures adherence to the specified contract.

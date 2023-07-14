@@ -1,0 +1,30 @@
+Q4.What is an interface in Java?
+
+
+
+
+ANSWER:
+
+
+
+In Java, an interface is a reference type that defines a contract of methods and constants that a class must implement. It serves as a blueprint for classes, specifying the behavior that the implementing classes must adhere to. An interface can be thought of as a collection of abstract methods (methods without a body) and static constants.
+
+Here are some key points about interfaces in Java:
+
+1. Declaration: An interface is declared using the `interface` keyword followed by the interface name. For example: `interface MyInterface { ... }`.
+
+2. Abstract Methods: An interface can declare abstract methods, which are methods without an implementation. By default, all methods in an interface are public and abstract. Implementing classes must provide an implementation for all declared abstract methods.
+
+3. Constants: Interfaces can also declare constants, which are implicitly `public`, `static`, and `final`. These constants are typically used to define values that are shared across implementing classes.
+
+4. Multiple Inheritance: Java allows multiple inheritance of interfaces. A class can implement multiple interfaces, separated by commas, thereby inheriting the abstract methods and constants from all implemented interfaces.
+
+5. Implementation: Classes implement an interface using the `implements` keyword. For example: `class MyClass implements MyInterface { ... }`. Implementing a class must provide an implementation for all the abstract methods declared in the interface.
+
+6. Interface Inheritance: Interfaces can extend other interfaces using the `extends` keyword. This allows for interface inheritance, where one interface inherits the methods and constants of another interface. A class implementing an interface that extends another interface must provide implementations for all inherited abstract methods.
+
+7. Default Methods: Starting from Java 8, interfaces can have default methods, which provide a default implementation for a method. Default methods are declared using the `default` keyword and can be overridden by implementing classes.
+
+8. Static Methods: Starting from Java 8, interfaces can also have static methods. These methods are declared using the `static` keyword and can be invoked directly on the interface itself, without the need for an implementing class.
+
+Interfaces in Java play a crucial role in achieving abstraction, providing a way to define common behavior, and facilitating loose coupling between components. They allow for polymorphism, code reuse, and a clear separation of concerns by defining contracts that classes must adhere to.

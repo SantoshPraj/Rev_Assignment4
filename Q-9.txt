@@ -1,0 +1,27 @@
+Q9.What is the benefit of lambda expressions in Java 8?
+
+
+
+
+ANSWER:
+
+
+
+
+Lambda expressions introduced in Java 8 provide several benefits and enhance the capabilities of the Java programming language. Here are some key benefits of lambda expressions:
+
+1. Concise Syntax: Lambda expressions offer a concise syntax for representing anonymous functions. They allow you to express behavior as a value in a compact and readable manner, reducing the amount of boilerplate code required for simple functional implementations.
+
+2. Functional Programming: Lambda expressions enable functional programming constructs in Java. They make it easier to work with behavior as values, supporting higher-order functions, function composition, and functional pipelines. This promotes code that is more declarative, expressive, and focused on the "what" rather than the "how".
+
+3. Improved Readability: Lambda expressions can enhance code readability by eliminating the need for anonymous inner classes and reducing the verbosity associated with certain functional programming patterns. They allow developers to express their intentions more clearly, leading to code that is easier to understand and maintain.
+
+4. Code Reusability: Lambda expressions facilitate code reuse by allowing behavior to be passed as arguments to methods. They enable the creation of more flexible and reusable components, promoting modular and composable code.
+
+5. Enhanced APIs: Lambda expressions make it easier to work with functional interfaces. Many JDK interfaces were retrofitted with functional interfaces in Java 8, providing improved APIs for working with collections, streams, predicates, functions, and more. This leads to more intuitive and expressive code when using these APIs.
+
+6. Parallel Processing: Lambda expressions, when combined with the Stream API, support parallel processing of collections. They allow for easier parallelization of tasks, enabling more efficient utilization of multi-core processors and potentially improving performance.
+
+7. Backward Compatibility: Lambda expressions are designed to be backward compatible with existing interfaces that have a single abstract method. This means that they can be used with pre-existing APIs that adhere to the single abstract method contract without any modification.
+
+By providing a concise and expressive syntax for representing behavior as values, lambda expressions bring functional programming capabilities to Java and help improve code readability, reusability, and modularity. They enhance the capabilities of the language and enable more flexible and efficient development practices.

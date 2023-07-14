@@ -1,0 +1,88 @@
+Q1. Write a program to show Interface Example in java?
+
+
+
+
+ANSWER:
+
+
+Certainly! Here's an example program that demonstrates the usage of interfaces in Java:
+
+```java
+// Define an interface
+interface Shape {
+    double calculateArea();
+    double calculatePerimeter();
+}
+
+// Implement the interface in a class
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+// Implement the interface in another class
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * (length + width);
+    }
+}
+
+// Use the interface and classes in the program
+public class InterfaceExample {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5.0);
+        System.out.println("Circle Area: " + circle.calculateArea());
+        System.out.println("Circle Perimeter: " + circle.calculatePerimeter());
+
+        Rectangle rectangle = new Rectangle(4.0, 6.0);
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+        System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
+    }
+}
+```
+
+Output:
+```
+Circle Area: 78.53981633974483
+Circle Perimeter: 31.41592653589793
+Rectangle Area: 24.0
+Rectangle Perimeter: 20.0
+```
+
+In this example, we define an interface called `Shape` with two methods: `calculateArea()` and `calculatePerimeter()`. The interface defines the contract that classes implementing it must adhere to.
+
+We then create two classes, `Circle` and `Rectangle`, which implement the `Shape` interface. These classes provide their specific implementation for the methods declared in the interface.
+
+In the `main` method, we create instances of `Circle` and `Rectangle` and call the `calculateArea()` and `calculatePerimeter()` methods on them. The methods execute the corresponding implementation defined in each class.
+
+By using the interface, we achieve polymorphism and can treat objects of different classes implementing the `Shape` interface interchangeably. This allows us to write flexible and reusable code that can work with various shapes without relying on their specific implementations.
+
+Interfaces in Java provide a way to define contracts, specify behavior, and achieve abstraction and polymorphism in the code. They are useful for defining common functionality shared by multiple classes and enabling loose coupling between components.

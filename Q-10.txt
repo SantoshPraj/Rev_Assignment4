@@ -1,0 +1,33 @@
+Q10.Is it mandatory for a lambda expression to have parameters?
+
+
+
+ANSWER:
+
+
+
+No, it is not mandatory for a lambda expression to have parameters. The presence or absence of parameters in a lambda expression depends on the functional interface it is used with and the requirements of the functional interface's abstract method.
+
+In Java, a lambda expression can have zero or more parameters, depending on the number and types of parameters specified in the abstract method of the functional interface.
+
+Here are a few examples to illustrate lambda expressions with different parameter configurations:
+
+1. Lambda Expression with No Parameters:
+```java
+Runnable runnable = () -> System.out.println("Hello, world!");
+```
+In this example, the `Runnable` functional interface's abstract method `run()` does not take any parameters. Therefore, the lambda expression representing the `run()` method implementation does not have any parameters.
+
+2. Lambda Expression with Single Parameter:
+```java
+Consumer<String> printer = message -> System.out.println(message);
+```
+In this example, the `Consumer` functional interface's abstract method `accept()` takes a single parameter of type `String`. The lambda expression represents the implementation of the `accept()` method and has a single parameter `message`.
+
+3. Lambda Expression with Multiple Parameters:
+```java
+Comparator<Integer> comparator = (a, b) -> a.compareTo(b);
+```
+In this example, the `Comparator` functional interface's abstract method `compare()` takes two parameters of type `Integer`. The lambda expression represents the implementation of the `compare()` method and has two parameters `a` and `b`.
+
+So, whether a lambda expression should have parameters or not depends on the functional interface's requirements and the specific context in which it is used. Lambda expressions offer flexibility in terms of the number and types of parameters they can have, allowing for concise representation of behavior as values.

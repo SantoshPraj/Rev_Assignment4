@@ -1,0 +1,47 @@
+Q6.What is the lambda expression of Java 8?
+
+
+
+
+ANSWER:
+
+
+
+
+In Java 8, lambda expressions were introduced as a new language feature. Lambda expressions provide a concise and functional way to represent anonymous functions or behavior that can be passed around as values. They enable functional programming-style constructs in Java and make code more expressive and readable.
+
+The syntax of a lambda expression consists of three main parts:
+```
+(parameters) -> { body }
+```
+
+Here's an example to illustrate the syntax and usage of a lambda expression in Java 8:
+
+```java
+interface MyFunction {
+    int apply(int x, int y);
+}
+
+public class LambdaExpressionExample {
+    public static void main(String[] args) {
+        // Using lambda expression to implement the functional interface
+        MyFunction addition = (x, y) -> x + y;
+        int result = addition.apply(5, 3);
+        System.out.println("Addition: " + result); // Output: Addition: 8
+
+        MyFunction subtraction = (x, y) -> x - y;
+        result = subtraction.apply(10, 4);
+        System.out.println("Subtraction: " + result); // Output: Subtraction: 6
+    }
+}
+```
+
+In this example, we define a functional interface called `MyFunction` with a single abstract method `apply()`, which takes two integers and returns an integer.
+
+In the `main` method, we use lambda expressions to implement the functional interface:
+- The lambda expression `(x, y) -> x + y` represents an anonymous function that takes two integers (`x` and `y`) and returns their sum (`x + y`).
+- The lambda expression `(x, y) -> x - y` represents an anonymous function that takes two integers (`x` and `y`) and returns their difference (`x - y`).
+
+We create instances of the functional interface `MyFunction` using these lambda expressions and invoke the `apply()` method on the instances to perform addition and subtraction.
+
+Lambda expressions eliminate the need to create separate classes or anonymous inner classes for simple functional implementations. They provide a concise way to represent behavior as values, enabling functional programming paradigms such as passing functions as arguments, returning functions from methods, and working with higher-order functions.
